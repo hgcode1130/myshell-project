@@ -150,8 +150,8 @@ char* read_command(FILE *input) {
  */
 Command* parse_command(char *line) {
     static Command cmd;
+    static char line_copy[MAX_LINE];
     char *token;
-    char line_copy[MAX_LINE];
 
     /* 初始化 Command 结构体 */
     cmd.argc = 0;
